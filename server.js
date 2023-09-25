@@ -4,7 +4,8 @@ require("dotenv").config();
 const emails = ["smokemax2002@gmail.com", "garushanmugam@gmail.com"];
 
 let mailSender = nodemailer.createTransport({
-  service: "gmail",
+  host: process.env.host,
+  port: process.env.port,
   auth: {
     user: process.env.user,
     pass: process.env.pass,
